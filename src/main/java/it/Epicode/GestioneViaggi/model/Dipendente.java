@@ -1,9 +1,9 @@
 package it.Epicode.GestioneViaggi.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.List;
 
 @Data
 @Entity
@@ -15,4 +15,7 @@ public class Dipendente {
     private String nome;
     private String cognome;
     private String email;
+    @OneToMany(mappedBy = "dipendente")
+    private List<Prenotazione> prenotazioni;
+
 }
