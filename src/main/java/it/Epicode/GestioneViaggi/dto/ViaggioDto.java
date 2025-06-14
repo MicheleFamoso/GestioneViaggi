@@ -16,6 +16,6 @@ public class ViaggioDto {
     private String destinazione;
     @NotNull(message = "La data non puo essere nulla ")
     private LocalDate data;
-    private StatoViaggio statoViaggio;
+
 
 }

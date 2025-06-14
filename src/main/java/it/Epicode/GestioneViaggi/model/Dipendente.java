@@ -16,6 +16,7 @@ public class Dipendente {
     private String nome;
     private String cognome;
     private String email;
+    private String avatar;
     @JsonIgnore
     @OneToMany(mappedBy = "dipendente")
     private List<Prenotazione> prenotazioni;
