@@ -1,5 +1,6 @@
 package it.Epicode.GestioneViaggi.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -15,6 +16,7 @@ public class Dipendente {
     private String nome;
     private String cognome;
     private String email;
+    @JsonIgnore
     @OneToMany(mappedBy = "dipendente")
     private List<Prenotazione> prenotazioni;
 
