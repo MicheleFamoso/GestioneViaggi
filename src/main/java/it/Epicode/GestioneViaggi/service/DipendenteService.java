@@ -43,7 +43,7 @@ public Dipendente saveDipendente(DipendenteDto dipendenteDto){
     dipendente.setCognome(dipendenteDto.getCognome());
     dipendente.setUserName(dipendenteDto.getUserName());
     dipendente.setEmail(dipendenteDto.getEmail());
-    sendMail(dipendenteDto.getEmail());
+   // sendMail(dipendenteDto.getEmail());
     return dipendenteRepository.save(dipendente);
     }
 
